@@ -2,7 +2,7 @@ manifestVersion: 1
 id: maestro-custom-n8n
 category: Automation
 name: n8n-custom
-version: "0.226.2"
+version: "0.226.3"
 releaseNotes: >-
   - Performance improvements
 
@@ -22,14 +22,14 @@ description: >-
   Privacy-focused: self-host n8n for privacy and security.
 developer: n8n
 website: https://n8n.io
-submitter: Dmytro N.
+submitter: Dmytro B.
 submission: https://github.com/getumbrel/umbrel-hello-world-app
 repo: https://github.com/dmitriy-b/umbrel-apps
 support: https://github.com/dmitriy-b/umbrel-apps/issues
 dependencies: []
 repo: https://github.com/n8n-io/n8n
 support: https://docs.n8n.io/
-port: 5679
+port: 5678
 gallery:
   - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
