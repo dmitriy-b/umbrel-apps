@@ -1,7 +1,8 @@
 manifestVersion: 1
-id: maestro-custom-n8n
+id: maestro-n8n
 category: Automation
 name: n8n-custom
+icon: https://svgur.com/i/mvA.svg
 version: "0.226.3"
 releaseNotes: >-
   - Performance improvements
