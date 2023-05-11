@@ -20,4 +20,4 @@ services:
       - PUID=1000
       - PGID=1000
       # Used to set the url for editor, REST API & webhooks
-      - N8N_HOST=$DEVICE_DOMAIN_NAME
+      - N8N_HOST=$N8N_HOST
