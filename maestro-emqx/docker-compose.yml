@@ -34,8 +34,11 @@ services:
       - ${APP_DATA_DIR}/data:/opt/emqx
     stop_grace_period: 1m
     ports:
-      - "1883:1883"
+      - 1883:1883
+      - 18083:18083
     environment:
       - PUID=1000
       - PGID=1000
-      - "EMQX_CLUSTER__DISCOVERY_STRATEGY=static"
+      - EMQX_CLUSTER__DISCOVERY_STRATEGY=static
+      - EMQX_NAME=$EMQX_NAME
+      - EMQX_HOST=$EMQX_HOST
