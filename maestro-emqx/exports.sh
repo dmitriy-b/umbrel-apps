@@ -1,0 +1,1 @@
+export EMQX_CLUSTER__DISCOVERY_STRATEGY=static

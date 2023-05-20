@@ -1,0 +1,27 @@
+manifestVersion: 1
+id: maestro-emqx
+name: emqx
+tagline: Build complex workflows, really fast. Fork of origianl n8n with fresh version
+icon: https://svgur.com/i/mvA.svg
+category: Development
+version: "5.0.25"
+port: 18083
+description: >-
+  EMQX is the world's most scalable open-source MQTT broker with a high performance that connects 100M+ IoT devices in 1 cluster, while maintaining 1M message per second throughput and sub-millisecond latency.
+
+developer: emqx
+website: https://n8n.io
+submitter: Dmytro B
+submission: https://github.com/dmitriy-b/umbrel-apps
+repo: https://github.com/dmitriy-b/umbrel-apps
+support: https://github.com/dmitriy-b/umbrel-apps/issues
+gallery:
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+releaseNotes: >-
+  - Performance improvements
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: maestro-emqx_server_1
+      APP_PORT: 18083
+      # These webhook endpoints are protected using Basic or Header Auth
+      # More details here: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/
+      # PROXY_AUTH_WHITELIST: "/webhook-test/*,/webhook/*"
+
+  server:
+    image: emqx/emqx:latest
+    sysctls:
+      - fs.file-max=2097152
+      - s.nr_open=2097152
+      - net.core.somaxconn=32768
+      - net.ipv4.tcp_max_syn_backlog=16384
+      - net.core.netdev_max_backlog=16384
+      - net.ipv4.ip_local_port_range=1000 65535
+      - net.core.rmem_default=262144
+      - net.core.wmem_default=262144
+      - net.core.rmem_max=16777216
+      - net.core.wmem_max=16777216
+      - net.core.optmem_max=16777216
+      - net.ipv4.tcp_rmem=1024 4096 16777216
+      - net.ipv4.tcp_wmem=1024 4096 16777216
+      - net.ipv4.tcp_max_tw_buckets=1048576
+      - net.ipv4.tcp_fin_timeout=15
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data:/opt/emqx
+    stop_grace_period: 1m
+    ports:
+      - "1883:1883"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - "EMQX_CLUSTER__DISCOVERY_STRATEGY=static"
