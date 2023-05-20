@@ -7,8 +7,8 @@ services:
       APP_PORT: 18083
       # These webhook endpoints are protected using Basic or Header Auth
       # More details here: https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/
-      # PROXY_AUTH_WHITELIST: "/webhook-test/*,/webhook/*"
-
+      #PROXY_AUTH_WHITELIST: "/webhook-test/*,/webhook/*"
+  
   server:
     image: emqx/emqx:latest
     sysctls:
@@ -31,7 +31,9 @@ services:
       - net.ipv4.tcp_fin_timeout=15
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data:/opt/emqx
+      - ${APP_DATA_DIR}/data/data:/opt/emqx/data
+      - ${APP_DATA_DIR}/data/etc:/opt/emqx/etc
+      - ${APP_DATA_DIR}/data/log:/opt/emqx/log
     stop_grace_period: 1m
     ports:
       - 1883:1883
