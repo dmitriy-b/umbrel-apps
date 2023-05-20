@@ -35,12 +35,11 @@ services:
       # - ${APP_DATA_DIR}/data/etc:/opt/emqx/etc
       #- ${APP_DATA_DIR}/data/log:/opt/emqx/log
     stop_grace_period: 1m
+    user: "1000:1000"
     ports:
       - 1883:1883
       - 1883:1883/udp
     environment:
-      - PUID=1000
-      - PGID=1000
       - EMQX_CLUSTER__DISCOVERY_STRATEGY=static
       - EMQX_NAME=$EMQX_NAME
       - EMQX_HOST=$EMQX_HOST
