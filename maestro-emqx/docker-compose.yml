@@ -32,7 +32,7 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/data:/opt/emqx/data
-      - ${APP_DATA_DIR}/data/etc:/opt/emqx/etc
+      # - ${APP_DATA_DIR}/data/etc:/opt/emqx/etc
       - ${APP_DATA_DIR}/data/log:/opt/emqx/log
     stop_grace_period: 1m
     ports:
