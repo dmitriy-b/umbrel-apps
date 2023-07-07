@@ -4,7 +4,7 @@ name: n8n custom
 tagline: Build complex workflows, really fast. Fork of origianl n8n with fresh version
 icon: https://svgur.com/i/mvA.svg
 category: Development
-version: "0.226.5"
+version: "0.234.1"
 port: 5678
 description: >-
   n8n is an extendable workflow automation tool. With a fair-code distribution model, n8n will always have visible source code, 
